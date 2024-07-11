@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="well well-sm">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <a href="#/library/addBook">
+              <span class="glyphicon glyphicon-pencil"></span> Add a book to the library manually
+            </a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12" ng-controller="LibraryController">
+
+    <!-- Filters Section -->
+
+    <button class="btn btn-info" ng-click="toggleFilters()">
+      <i class="glyphicon glyphicon-filter"></i> Filter Books
+    </button>
+    <button class="btn btn-info" ng-click="toggleRanking()">
+      <i class="glyphicon glyphicon-sort"></i> Rank Books
+    </button>
+
+    <div ng-if="showRanking">
+      <h3>Ranking Criteria</h3>
+      <div class="btn-group">
+        <button class="btn btn-default" ng-click="updateSortCriterion(1)">By Average Rating</button>
+        <button class="btn btn-default" ng-click="updateSortCriterion(2)">By Number of Ratings</button>
+      </div>
+    </div>
+
+    <div ng-if="showFilters">
+      <h2>Filters</h2>
+      <div class="form-group">
+        <label for="authorInput">Authors (comma-separated):</label>
+        <input id="authorInput" type="text" class="form-control" ng-model="filters.authors" placeholder="Enter author names, separated by commas">
+      </div>
+      <div class="form-group">
+        <label>Genres:</label>
+        <div ng-repeat="genre in filters.availableGenres">
+            <label>
+                <input type="checkbox" ng-model="genre.checked"> {{genre.name}}
+            </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ratingSelect">Ratings:</label>
+        <select id="ratingSelect" class="form-control" ng-model="filters.rating" ng-options="rating for rating in availableRatings">
+            <option value="">Select Minimum Rating</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" ng-click="fetchBooks()">Apply Filters</button>
+    </div>
+
+    <!-- Books Section -->
+    <h2 class="mt-4">Current Books in the Common Library</h2>
+    <div class="row book-list">
+      <div ng-if="books.length === 0">No books found.</div>
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 book" ng-repeat="book in books">
+        <a ng-click="viewBookDetails(book.id)" class="thumbnail">
+          <div class="image">
+            <img ng-src="{{book.image || 'dummyImageCover.jpeg'}}" alt="{{ book.title }}" title="{{ book.title }}" />
+          </div>
+          <div class="caption">
+            <p class="text-primary text-center">{{ book.title }}</p>
+            <p class="text-muted text-center">{{ book.author }}</p>
+            <!-- Display genres and rating if needed -->
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12">
+      <h1>{{ selectedResult.title }}</h1>
+      <h2>{{ selectedResult.artist }}</h2>
+      <h4>{{ selectedResult.viewUrl }}</h4>
+      <div class="image">
+        <img src="audio.png" alt="Audio Image" style="width: 25%;">
+      </div>
+    </div>
+  
+    <div class="col-md-12">
+      <div class="checkbox">
+        <label>
+          <input
+            type="checkbox"
+            ng-model="isFavourite"
+            ng-change="toggleFavourite()"
+          /> Add to Favourites
+        </label>
+      </div>
+  
+      <span class="glyphicon glyphicon-heart"></span>
+      {{ isFavourite ? 'Remove from Favourites' : 'Add to Favourites' }}
+    </div>
+  </div>
+  

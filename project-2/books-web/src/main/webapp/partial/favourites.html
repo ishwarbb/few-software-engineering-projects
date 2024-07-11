@@ -1,0 +1,98 @@
+<!-- <div class="row-fluid">
+    <div class="col-md-12">
+      <div class="row book-list"  infinite-margin="200">
+        <h3>Audio Book Favourites </h3>
+        <div class="list-group search-results">
+          <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 book" ng-repeat="favourite in audioBookFavourites">
+              <a href="" class="thumbnail" ng-click="">
+              <span class="thumbnail">
+                <div class="image">
+                <img src="audio.png" alt="Audio Image">
+                </div>
+                <div class="caption">
+                  <p class="text-primary text-center">{{ favourite.title }}</p>
+                  <p class="text-muted text-center">{{ favourite.author }}</p>
+                </div>
+              </a>
+            </span>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="col-md-12">
+      <div class="row book-list"  infinite-margin="200">
+        <h3>Podcast Favourites </h3>
+        <div class="list-group search-results">
+          <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 book" ng-repeat="favourite in podcastFavourites">
+              <a href="" class="thumbnail" ng-click="">
+              <span class="thumbnail">
+                <div class="image">
+                <img src="audio.png" alt="Audio Image">
+                </div>
+                <div class="caption">
+                  <p class="text-primary text-center">{{ favourite.title }}</p>
+                  <p class="text-muted text-center">{{ favourite.author }}</p>
+                </div>
+              </a>
+            </span>
+  
+              
+            </div>
+          </div>
+      </div>
+    </div>
+</div> -->
+
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12 text-center">
+          <div class="btn-group" role="group" aria-label="Favourites Toggle">
+              <button type="button" class="btn btn-secondary" ng-class="{ 'btn-primary': activeFavouritesType === 'audiobook', 'btn-secondary': activeFavouritesType !== 'audiobook' }" ng-click="toggleFavourites('audiobook')">Audio Books</button>
+              <button type="button" class="btn btn-secondary" ng-class="{ 'btn-primary': activeFavouritesType === 'podcast', 'btn-secondary': activeFavouritesType !== 'podcast' }" ng-click="toggleFavourites('podcast')">Podcasts</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-12">
+          <div class="row book-list" infinite-margin="200">
+              <h3>{{ activeFavouritesType === 'audiobook' ? 'Audio Book' : 'Podcast' }} Favourites </h3>
+              <!-- BEGIN: be15d9bcejpp -->
+              <div class="list-group search-results" ng-if="activeFavouritesType === 'audiobook'">
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 book" ng-repeat="favourite in audioBookFavourites">
+                      <a href="" class="thumbnail" ng-click="viewFavourite(favourite)">
+                          <span class="thumbnail">
+                              <div class="image">
+                                  <img src="audio.png" alt="Audio Image">
+                              </div>
+                              <div class="caption">
+                                  <p class="text-primary text-center">{{ favourite.title }}</p>
+                                  <p class="text-muted text-center">{{ favourite.author }}</p>
+                              </div>
+                          </span>
+                      </a>
+                  </div>
+              </div>
+              <!-- END: be15d9bcejpp -->
+              <div class="list-group search-results" ng-if="activeFavouritesType === 'podcast'">
+                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 book" ng-repeat="favourite in podcastFavourites">
+                  <a href="" class="thumbnail" ng-click="viewFavourite(favourite)">
+                      <span class="thumbnail">
+                          <div class="image">
+                              <img src="audio.png" alt="Audio Image">
+                          </div>
+                          <div class="caption">
+                              <p class="text-primary text-center">{{ favourite.title }}</p>
+                              <p class="text-muted text-center">{{ favourite.author }}</p>
+                          </div>
+                      </span>
+                  </a>
+              </div>
+          </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

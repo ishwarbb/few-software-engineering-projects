@@ -1,0 +1,64 @@
+<!-- <div class="row" ng-show="!selectedResult">
+    <div class="col-md-12">
+      <img src="img/loader.gif" / alt="">
+    </div>
+  </div> -->
+
+<!-- <div class="row">
+    <div class="col-md-12">
+      <h1> TODO : Work in Progress</h1>
+      <h2>{{ selectedResult.title }} {{ selectedResult.subtitle }} <small>{{ selectedResult.author }}</small></h2>
+  
+      <ul class="list-inline tags-book-view">
+        <li ng-repeat="tag in tags">
+          <div class="btn btn-default" ng-style="{ 'background-color': tag.color }">
+            <label><input type="checkbox" ng-model="tag.active"> {{ tag.name }}</label> -->
+<!-- </div>
+        </li>
+      </ul>
+  
+      <p class="pull-left">
+        <img ng-if="book && !coverChanging" ng-src="api/book/{{ book.id }}/cover" class="cover-book-view" ng-click="editCover()" />
+        <img src="img/loader.gif" ng-if="coverChanging" />
+      </p>
+      <p class="clearfix">{{ selectedResult.description }}</p>
+  
+      <dl class="dl-horizontal">
+        <dt>Add to favourites</dt>
+        <dd><input type="checkbox" ng-model="book.read" />{{ favourites }}</dd>
+        <dt>Publication date</dt>
+        <dd>{{ book.publish_date | date: 'yyyy' }}</dd>
+      </dl>
+  
+      <div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger" ng-click="deleteBook()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+          <button type="button" class="btn btn-primary" ng-click="editBook()"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ selectedResult.title }}</h1>
+      <h2>{{ selectedResult.author }}</h2>
+      <p>{{ selectedResult.description }}</p>
+    </div>
+  
+    <div class="col-md-12">
+      <div class="checkbox">
+        <label>
+          <input
+            type="checkbox"
+            ng-model="isFavourite"
+            ng-change="toggleFavourite()"
+          /> Add to Favourites
+        </label>
+      </div>
+  
+      <span class="glyphicon glyphicon-heart"></span>
+      {{ isFavourite ? 'Remove from Favourites' : 'Add to Favourites' }}
+    </div>
+  </div>
+  
