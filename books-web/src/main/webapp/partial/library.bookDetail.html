@@ -1,0 +1,49 @@
+<div class="row" ng-show="book">
+    <div class="col-md-12">
+        <h2>{{ book.title }} <small>{{ book.author }}</small></h2>
+        <p class="pull-left">
+            <img ng-if="book" ng-src="dummyImageCover.jpeg" class="cover-book-view"/>
+        </p>
+        <p class="clearfix">Using her unique talents to intervene in the lives of humans to help them resist temptation and avoid untimely deaths, Nina, a guide between the living and the dead, finds herself caught in the middle between good and evil forces battling for control of Purgatory and battling her own temptations. Original.</p>
+        
+        <dl class="dl-horizontal">
+            <dt>Genres:</dt>
+            <dd>
+                <span ng-repeat="genre in book.genres">{{genre}}{{$last ? '' : ', '}}</span>
+            </dd>
+            <dt>Average Rating:</dt>
+            <dd>{{ book.avg_rating }}</dd>
+            <dt>Number of Ratings:</dt> 
+            <dd>{{ book.num_ratings }}</dd>
+        </dl>
+        <button type="button" class="btn btn-info" ng-click="showGenreOptions = !showGenreOptions">Add Genre</button>
+
+        <!-- Genre addition section -->
+        <div ng-if="showGenreOptions">
+            <h3>Select Genres to Add:</h3>
+            <div ng-repeat="genre in allowedGenres">
+                <label>
+                    <input type="checkbox" ng-model="genre.checked"> {{genre.name}}
+                </label>
+            </div>
+            <button type="button" class="btn btn-success" ng-click="addGenre()">Add Selected Genres</button>
+        </div>
+        
+        <h3>Rate this Book:</h3>
+        <form ng-submit="addRating()">
+            <select ng-model="bookRating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button type="submit">Submit Rating</button>
+        </form>
+    </div>
+</div>  
