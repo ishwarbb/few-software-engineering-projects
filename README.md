@@ -3,7 +3,7 @@
 A couple of the projects done as part of the course [CS6401: Software Engineering](https://karthikv1392.github.io/cs6401_se/).
 
 - **Project 1 - Analysis and Refactoring**
-    - **A small Project (Automated Refactoring) - LLMs, Code Smells**
+    - And, a smaller Project (Automated Refactoring) - LLMs, Code Smells
 
 - **Project 2 - Design Patterns and Principles, OOPs**
 
