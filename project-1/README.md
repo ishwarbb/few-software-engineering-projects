@@ -1,6 +1,6 @@
 ## SE Project-1 Report
 
-Please refer to the report's PDF version [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-1/SE%20Project-1%20Report.pdf) for the complete details.
+Please refer to the report's PDF version [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-1/SE%20Project-1%20Report.pdf) for the complete details. Attached is a shorter LLM-generated summary.
 
 ![UML Diagram from Projet 1](../images/project-1.png)
 
@@ -94,6 +94,3 @@ Post-refactoring metrics showed improvements in code quality.
 Explored the use of AI models to assist in code refactoring processes.
 
 This report encapsulates the findings and methodologies employed throughout the SE Project-1, highlighting the intricacies of the codebase and the strategies for effective management and improvement.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/9496299/f40ce2d3-c62e-4db6-967a-8aba13495bc7/SE-Project-1-Report-1.pdf
