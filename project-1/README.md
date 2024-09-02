@@ -1,116 +1,99 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/tUdRNrT1)
-Sismics Books - Project 1
-=========================
+## SE Project-1 Report
 
-**Do not modify this README. Use the docs directory for anything you might want to submit**
+Please refer to the report's PDF version [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-1/SE%20Project-1%20Report.pdf) for the complete details.
 
+![UML Diagram from Projet 1](../images/project-1.png)
 
-What is Books?
----------------
+### Table of Contents
+- Team Members
+- Task 1: Mining the Repository
+  - Introduction
+  - Methodology
+  - Assumptions
+  - Book Addition & Display Subsystem
+  - Classes Used
+  - Functionality and Behaviour
+  - OOP Concepts
+  - Strengths
+  - Weaknesses
+- Task 2: Analysis Methodology
+  - Task 2A: Design Smells
+  - Task 2B: Code Metrics
+- Task 3: Refactoring Methodology
+  - Task 3A: Design Smells
+  - Task 3B: Code Metrics
+  - Task 3C: Leveraging Large Language Models for Refactoring
 
-Books is an open source, lightweight book management system.
+### Team Members
+1. Vineeth Bhat (2021101103)
+2. Ishwar B Balappanawar (2021101023)
+3. Swayam Agrawal (2021101068)
+4. Mitansh Kayathwal (2021101026)
+5. G.L. Vaishnavi (2023204009)
 
-Books is written in Java, and may be run on any operating system with Java support.
+### Task 1: Mining the Repository
 
-Features
---------
+#### Introduction
+The project involves a deep exploration of a complex codebase, focusing on the functionality of a web application developed in Java and JavaScript. The methodology includes executing code and testing components to understand class interactions and dependencies.
 
-- Responsive user interface
-- Add book by barcode scanning
-- Bookshelves system
-- Multi-users
-- Goodreads import
-- Support Google Books API and Open Library API
-- RESTful Web API
+#### Methodology
+The approach began with executing the code to identify classes and their relationships. PlantUML was utilized to generate UML diagrams, which were refined through manual inspection to accurately represent class interactions.
 
-License
--------
+#### Assumptions
+- All user-defined classes are included in the UML diagrams.
+- Only classes that directly affect subsystem functionality are represented to maintain clarity.
 
-Books is released under the terms of the GPL license. See `LICENSE` for more
-information or see <http://opensource.org/licenses/GPL-2.0>.
+### Book Addition & Display Subsystem
 
-How to build Books from the sources
------------------------------------
+#### UML Diagrams
+- **UML V1.1**: All relations, a superset of classes.
+- **UML V1.2**: Major classes only.
+- **UML V1.3**: Major classes without dependencies.
 
-Prerequisites: JDK 7, Maven 3, Tesseract 3.02
+#### Classes Used
+1. **BookResource**: Manages book operations.
+2. **Book**: Represents book attributes.
+3. **User**: Contains user-related information.
+4. **UserBook**: Manages user-book associations.
+5. **BookDao**: Handles database operations for books.
 
-### Changing Java Version <br>
-You will need two versions of Java to work on this project. Book require JDK 7 and Sonarqube requires Java 11. So you will have to change Java versions for working on different parts.
+#### Functionality and Behaviour
+The subsystem enables users to manage book collections, including adding, updating, and retrieving book information. It also features a tagging system for better organization.
 
-### For Globally Changing Java Version (Only on Ubuntu) 
-* Run the following command and select the version of Java you want to use.
-  ```
-  sudo update-alternatives --config java
-  ```
-* Similarly for javac.
-  ```
-  sudo update-alternatives --config javac
-  ```
-> Make sure you set the same version for both.  
+#### OOP Concepts
+- **Abstraction**: BaseResource class provides common functionalities.
+- **Inheritance**: TagResource inherits from BaseResource.
+- **Encapsulation**: Classes encapsulate data and methods.
+- **Polymorphism**: Methods can behave differently based on the implementing class.
 
-### Or you can follow this method for Updating in Specific Runtime  (Mac & Linux)
-* Instead of globally updating your Java version, it is better to temporarily change the Java version i.e. for as long as the terminal is open.
-* This is done by setting the path variable JAVA_HOME to the version of Java you want to use.
-* The command would be ```export JAVA_HOME=<path to java installation>``` for Mac and Linux.
+#### Strengths
+- Robust user and book management functionalities.
+- Efficient data access and validation mechanisms.
 
-> The paths mentioned here are only sample paths. Make sure you find out the actual path for your JDK and use that.
+#### Weaknesses
+- Lack of comprehensive data validation may affect integrity.
+- Limited user customization options.
 
+### Task 2: Analysis Methodology
 
-**On Mac**  
-This is an example command and the actual command would look something like this - 
-```
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/<jdk-version-something>/Contents/Home/
-```
+#### Task 2A: Design Smells
+Identified design issues include cyclic dependencies, broken modularization, and primitive obsession.
 
-**On Linux**  
-This is an example command and the actual command would look something like this -
-```
-export JAVA_HOME=/usr/lib/jvm/<jdk-version-something>
-```
+#### Task 2B: Code Metrics
+Utilized tools like CodeMR and CheckStyle to analyze code quality and maintainability.
 
+### Task 3: Refactoring Methodology
 
-**On Windows**  
-Windows users, this is your cross to bear. [Here's](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html) a guide that might be of use. Again, feel free to contact us for any help.  
- 
+#### Task 3A: Design Smells
+Issues identified in the previous analysis were addressed through refactoring.
 
-### Books is organized in several Maven modules: ###
+#### Task 3B: Code Metrics
+Post-refactoring metrics showed improvements in code quality.
 
-  - books-parent
-  - books-core
-  - books-web
-  - books-web-common
+#### Task 3C: Leveraging Large Language Models for Refactoring
+Explored the use of AI models to assist in code refactoring processes.
 
-First off, clone the repository: `git clone git://github.com/sismics/books.git`
-or download the sources from GitHub.
+This report encapsulates the findings and methodologies employed throughout the SE Project-1, highlighting the intricacies of the codebase and the strategies for effective management and improvement.
 
-#### Launch the build
-
-From the `books-parent` directory:
-
-    mvn clean -DskipTests install
-
-#### Run a stand-alone version
-
-From the `books-web` directory:
-
-    mvn jetty:run
-  
-#### Navigate to the following URL on your browser:
-
-  http://localhost:8080/books-web/#/login
-
-Use default credentials as admin(username) and admin(password).
-
-#### Navigate to the following URL on your browser:
-
-  http://localhost:8080/books-web/#/login
-
-Use default credentials as admin(username) and admin(password).
-    
-#### Build a .war to deploy to your servlet container
-
-From the `books-web` directory:
-
-    mvn -Pprod -DskipTests clean install
-
-You will get your deployable WAR in the `target` directory.
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/9496299/f40ce2d3-c62e-4db6-967a-8aba13495bc7/SE-Project-1-Report-1.pdf
