@@ -2,8 +2,6 @@
 
 Please refer to the report's PDF [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-2/project2_14.pdf) for all the details. Attached is an LLM generated summary.
 
-![Design Decision from Project 2](../images/project-2.png)
-
 ## SE Project-2 Summary
 
 ### Feature 1: Better User Management
@@ -29,6 +27,8 @@ The project aims to enhance user management by allowing self-registration direct
 
 **Introduction**  
 This feature allows users to contribute to and explore a common library, enhancing community engagement.
+
+![Design Decision from Project 2](../images/project-2.png)
 
 **Plan**  
 - Designed schemas for books, ratings, and genres.
