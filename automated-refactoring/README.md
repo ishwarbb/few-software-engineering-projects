@@ -20,20 +20,7 @@ smells, the applied refactoring techniques, and any relevant metrics.
 
 ## High level overview of pipeline
 
-- We have setup a cron job that runs `scripts/script.py` every few hours
-- It pulls the `main` branch and finds design smells
-- We refactor based on the design smells on a per-file basis
-- We create a pull request with the new code
+- Developed a script to periodically scan the GitHub repository for design smells. Utilize the capabilities of Language Models (LLMs) to assist in identifying potential design issues in the codebase.
+- Automated refactoring and pull request generation using GitHub workflows.
 
-## TODO
-
-- [x] Get basic GitHub stuff like pull requests working
-- [x] Get checkstyle working and format the output
-- [x] Form the prompt for single file refactoring.
-- [x] Design smell detection
-- [x] Write API code (pulls latest code after checking for changes in the specified repository to check for smells)
-- [x] Write script for periodically checking repo
-- [x] Write code for actually refactoring the code based on the smells suggested.
-- [x] Compare with other gpt models (codex?)
-- [x] Integrate code for creating branch and making pull request with `script.py` in scripts.
-- [x] Modify the cronjob for making pull requests and publishing the new branch.
+![Automated Refactoring Pipeline](../images/Automated-Refactoring.png)
