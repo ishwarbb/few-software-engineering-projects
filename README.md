@@ -8,6 +8,8 @@ A couple of the projects done as part of the course [CS6401: Software Engineerin
 
 - **Project 3 (Model Hub) - Architecture, Patterns, Prototypes**
 
+- **A final Project (Automated Refactoring) - LLMs, Code Smells**
+
 ## Contents
 
 The corresponding code and reports have been added as subdirectories with their commits squashed into this repository's main branch.
