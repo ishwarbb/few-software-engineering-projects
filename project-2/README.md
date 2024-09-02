@@ -1,116 +1,69 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/tUdRNrT1)
-Sismics Books - Project 1
-=========================
+## SE Project-2
 
-**Do not modify this README. Use the docs directory for anything you might want to submit**
+Please refer to the report's PDF [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-2/project2_14.pdf) for all the details. Attached is an LLM generated summary.
 
+![Design Decision from Project 2](../images/project-2.png)
 
-What is Books?
----------------
+## SE Project-2 Summary
 
-Books is an open source, lightweight book management system.
+### Feature 1: Better User Management
 
-Books is written in Java, and may be run on any operating system with Java support.
+**Introduction**  
+The project aims to enhance user management by allowing self-registration directly from the login page, improving user experience.
 
-Features
---------
+**Plan**  
+- Introduced a "Sign Up" tab in the navigation bar.
+- Implemented a user-friendly registration interface requiring username, email, and password.
+- Added validation checks for email uniqueness and password strength.
 
-- Responsive user interface
-- Add book by barcode scanning
-- Bookshelves system
-- Multi-users
-- Goodreads import
-- Support Google Books API and Open Library API
-- RESTful Web API
+**Design Patterns**  
+- **Chain of Responsibility**: Utilized for password validation through a series of handler classes, each checking specific password criteria.
 
-License
--------
+**Implementation Details**  
+- **Front End**: Added signup.html and Signup.js for user registration.
+- **Back End**: Handled in UserHandler.java and ValidationUtil.java.
 
-Books is released under the terms of the GPL license. See `LICENSE` for more
-information or see <http://opensource.org/licenses/GPL-2.0>.
+---
 
-How to build Books from the sources
------------------------------------
+### Feature 2: Common Library
 
-Prerequisites: JDK 7, Maven 3, Tesseract 3.02
+**Introduction**  
+This feature allows users to contribute to and explore a common library, enhancing community engagement.
 
-### Changing Java Version <br>
-You will need two versions of Java to work on this project. Book require JDK 7 and Sonarqube requires Java 11. So you will have to change Java versions for working on different parts.
+**Plan**  
+- Designed schemas for books, ratings, and genres.
+- Developed API calls for library operations and conducted testing using Postman.
 
-### For Globally Changing Java Version (Only on Ubuntu) 
-* Run the following command and select the version of Java you want to use.
-  ```
-  sudo update-alternatives --config java
-  ```
-* Similarly for javac.
-  ```
-  sudo update-alternatives --config javac
-  ```
-> Make sure you set the same version for both.  
+**Design Patterns**  
+- **Strategy Pattern**: Implemented for sorting and filtering library books based on various criteria.
 
-### Or you can follow this method for Updating in Specific Runtime  (Mac & Linux)
-* Instead of globally updating your Java version, it is better to temporarily change the Java version i.e. for as long as the terminal is open.
-* This is done by setting the path variable JAVA_HOME to the version of Java you want to use.
-* The command would be ```export JAVA_HOME=<path to java installation>``` for Mac and Linux.
+**Implementation Details**  
+- **Front End**: Created library.html for displaying books and options to add and rate them.
+- **Back End**: Defined data models and DAO classes for library management.
 
-> The paths mentioned here are only sample paths. Make sure you find out the actual path for your JDK and use that.
+---
 
+### Feature 3: Online Integration
 
-**On Mac**  
-This is an example command and the actual command would look something like this - 
-```
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/<jdk-version-something>/Contents/Home/
-```
+**Introduction**  
+Integrates Spotify and iTunes for accessing audiobooks and podcasts, enhancing user experience.
 
-**On Linux**  
-This is an example command and the actual command would look something like this -
-```
-export JAVA_HOME=/usr/lib/jvm/<jdk-version-something>
-```
+**Objective**  
+To provide users with the option to select their preferred service provider for audio content.
 
+**Plan**  
+- Conducted API testing to understand data structures from Spotify and iTunes.
+- Implemented a mandatory user selection step before searches to minimize errors.
 
-**On Windows**  
-Windows users, this is your cross to bear. [Here's](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html) a guide that might be of use. Again, feel free to contact us for any help.  
- 
+**Design Patterns**  
+- **Factory Pattern**: Used for creating audio content based on the selected service provider.
+- **Adapter Pattern**: Employed to standardize data formats across different service providers.
 
-### Books is organized in several Maven modules: ###
+**Implementation Details**  
+- **Front End**: Developed HTML and JS files for audio content display and user interaction.
+- **Back End**: Managed audio content through dedicated resource and DAO classes.
 
-  - books-parent
-  - books-core
-  - books-web
-  - books-web-common
+---
 
-First off, clone the repository: `git clone git://github.com/sismics/books.git`
-or download the sources from GitHub.
-
-#### Launch the build
-
-From the `books-parent` directory:
-
-    mvn clean -DskipTests install
-
-#### Run a stand-alone version
-
-From the `books-web` directory:
-
-    mvn jetty:run
-  
-#### Navigate to the following URL on your browser:
-
-  http://localhost:8080/books-web/#/login
-
-Use default credentials as admin(username) and admin(password).
-
-#### Navigate to the following URL on your browser:
-
-  http://localhost:8080/books-web/#/login
-
-Use default credentials as admin(username) and admin(password).
-    
-#### Build a .war to deploy to your servlet container
-
-From the `books-web` directory:
-
-    mvn -Pprod -DskipTests clean install
-
-You will get your deployable WAR in the `target` directory.
+### Conclusion
+The project successfully enhances user management, establishes a common library, and integrates online audio services, employing various design patterns for maintainability and scalability.
