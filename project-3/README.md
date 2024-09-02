@@ -2,10 +2,6 @@
 
 Please refer to the report's PDF [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-3/SE%20Project-3%20report.pdf) for all the details. Attached is an LLM generated summary.
 
-![ADR from Project 3](../images/project-3-1.png)
-
-![Arch from Project 3](../images/project-3-2.png)
-
 ## Project Summary: ModelHub Software Architecture
 
 ### Overview
@@ -13,6 +9,9 @@ ModelHub is an application designed to streamline the training, testing, and log
 
 ### Architectural Framework
 The architecture of ModelHub is structured around several key components, following the IEEE 42010 framework for architecture description.
+
+![ADR from Project 3](../images/project-3-1.png)
+
 
 #### Subsystems
 1. **User Management**: Facilitates user authentication and profile management, ensuring secure access to personalized features.
@@ -37,6 +36,9 @@ The project incorporates several architectural tactics to address key concerns:
 - **Security**: Implemented JWT for user authentication and utilized Google Drive for secure data storage, ensuring data confidentiality and integrity.
 
 - **Performance**: The system is optimized to deliver responsive interactions within 0.5 seconds, supporting multiple concurrent users.
+
+![Arch from Project 3](../images/project-3-2.png)
+
 
 ### Stakeholder Identification
 The architecture considers various stakeholders, including end-users, service runners, and developers, each with distinct concerns regarding usability, performance, security, and maintainability.
