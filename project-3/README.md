@@ -1,4 +1,4 @@
-## SE Project-3: Model Hive
+## SE Project-3: ModelHub
 
 Please refer to the report's PDF [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-3/SE%20Project-3%20report.pdf) for all the details. Attached is an LLM generated summary.
 
@@ -6,13 +6,13 @@ Please refer to the report's PDF [here](https://github.com/FlightVin/few-softwar
 
 ![Arch from Project 3](../images/project-3-2.png)
 
-## Project Summary: Model Hive Software Architecture
+## Project Summary: ModelHub Software Architecture
 
 ### Overview
-Model Hive is an application designed to streamline the training, testing, and logging of Machine Learning (ML) models online. Inspired by established platforms like Weights & Biases and Kaggle, it aims to enhance user experience by providing a user-friendly interface that allows users to manage ML models efficiently.
+ModelHub is an application designed to streamline the training, testing, and logging of Machine Learning (ML) models online. Inspired by established platforms like Weights & Biases and Kaggle, it aims to enhance user experience by providing a user-friendly interface that allows users to manage ML models efficiently.
 
 ### Architectural Framework
-The architecture of Model Hive is structured around several key components, following the IEEE 42010 framework for architecture description.
+The architecture of ModelHub is structured around several key components, following the IEEE 42010 framework for architecture description.
 
 #### Subsystems
 1. **User Management**: Facilitates user authentication and profile management, ensuring secure access to personalized features.
@@ -42,7 +42,7 @@ The project incorporates several architectural tactics to address key concerns:
 The architecture considers various stakeholders, including end-users, service runners, and developers, each with distinct concerns regarding usability, performance, security, and maintainability.
 
 ### Architectural Views
-Model Hive employs multiple architectural viewpoints to address stakeholder concerns:
+ModelHub employs multiple architectural viewpoints to address stakeholder concerns:
 
 - **User Interface Viewpoint**: Focuses on the design and navigation of the application.
   
@@ -57,4 +57,4 @@ Model Hive employs multiple architectural viewpoints to address stakeholder conc
 - **Performance Viewpoint**: Analyzes system performance metrics and optimization strategies.
 
 ### Conclusion
-The architectural design of Model Hive emphasizes modularity, security, and performance, enabling a robust platform for ML model management. By leveraging microservices and strategic storage solutions, the project aims to provide a scalable and user-friendly environment for machine learning experimentation and exploration.
+The architectural design of ModelHub emphasizes modularity, security, and performance, enabling a robust platform for ML model management. By leveraging microservices and strategic storage solutions, the project aims to provide a scalable and user-friendly environment for machine learning experimentation and exploration.
