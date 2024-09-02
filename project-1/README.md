@@ -2,35 +2,6 @@
 
 Please refer to the report's PDF version [here](https://github.com/FlightVin/few-software-engineering-projects/blob/main/project-1/SE%20Project-1%20Report.pdf) for the complete details. Attached is a shorter LLM-generated summary.
 
-![UML Diagram from Projet 1](../images/project-1.png)
-
-### Table of Contents
-- Team Members
-- Task 1: Mining the Repository
-  - Introduction
-  - Methodology
-  - Assumptions
-  - Book Addition & Display Subsystem
-  - Classes Used
-  - Functionality and Behaviour
-  - OOP Concepts
-  - Strengths
-  - Weaknesses
-- Task 2: Analysis Methodology
-  - Task 2A: Design Smells
-  - Task 2B: Code Metrics
-- Task 3: Refactoring Methodology
-  - Task 3A: Design Smells
-  - Task 3B: Code Metrics
-  - Task 3C: Leveraging Large Language Models for Refactoring
-
-### Team Members
-1. Vineeth Bhat (2021101103)
-2. Ishwar B Balappanawar (2021101023)
-3. Swayam Agrawal (2021101068)
-4. Mitansh Kayathwal (2021101026)
-5. G.L. Vaishnavi (2023204009)
-
 ### Task 1: Mining the Repository
 
 #### Introduction
@@ -44,6 +15,8 @@ The approach began with executing the code to identify classes and their relatio
 - Only classes that directly affect subsystem functionality are represented to maintain clarity.
 
 ### Book Addition & Display Subsystem
+
+![UML Diagram from Projet 1](../images/project-1.png)
 
 #### UML Diagrams
 - **UML V1.1**: All relations, a superset of classes.
