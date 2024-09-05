@@ -2,11 +2,12 @@
 
 A couple of the projects done in a team as part of the course [CS6401: Software Engineering](https://karthikv1392.github.io/cs6401_se/).
 
-### Team Members:
-1. [Vineeth Bhat](https://github.com/FlightVin)
-2. [Ishwar Balappanawar](https://github.com/ishwarbb)
-3. [Mitansh Kayathwal](https://github.com/Mitanshk01)
-4. [Swayam Agrawal](https://github.com/schlechter-afk)
+### Team Members: 
+| [Ishwar Balappanawar*](https://github.com/ishwarbb)      | [Vineeth Bhat*](https://github.com/FlightVin)           |
+|----------------------------------------------------------|---------------------------------------------------------|
+| [**Swayam Agrawal***](https://github.com/schlechter-afk) | [**Mitansh Kayathwal***](https://github.com/Mitanshk01) |
+
+#### * denotes equal contribution
 
 --- 
 
