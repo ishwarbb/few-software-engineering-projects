@@ -1,6 +1,14 @@
 # Few Software Engineering Projects
 
-A couple of the projects done as part of the course [CS6401: Software Engineering](https://karthikv1392.github.io/cs6401_se/).
+A couple of the projects done in a team as part of the course [CS6401: Software Engineering](https://karthikv1392.github.io/cs6401_se/).
+
+### Team Members:
+1. [Vineeth Bhat](https://github.com/FlightVin)
+2. [Ishwar Balappanawar](https://github.com/ishwarbb)
+3. [Mitansh Kayathwal](https://github.com/Mitanshk01)
+4. [Swayam Agrawal](https://github.com/schlechter-afk)
+
+--- 
 
 - **Project 1 - Analysis and Refactoring**
     - And, a smaller Project (Automated Refactoring) - LLMs, Code Smells
